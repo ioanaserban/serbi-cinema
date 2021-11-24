@@ -19,3 +19,4 @@ function dd($data)
 }
 
 require(__DIR__ . '/../core/DbManipulator.php');
+require(__DIR__ . '/../core/User.php');

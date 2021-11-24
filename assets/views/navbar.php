@@ -1,31 +1,38 @@
-<header>
-    <div class="collapse bg-dark" id="navbarHeader">
+<header class="h-62px">
+
+
+
+    <div class="navbar navbar-light shadow-sm fixed-top">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-md-7 py-4">
-                    <h4 class="text-white">About</h4>
-                    <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-                </div>
-                <div class="col-sm-4 offset-md-1 py-4">
-                    <h4 class="text-white">Contact</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                        <li><a href="#" class="text-white">Like on Facebook</a></li>
-                        <li><a href="#" class="text-white">Email me</a></li>
-                    </ul>
-                </div>
+            <div class="d-flex align-items-center">
+                <a href="/" class="navbar-brand d-flex align-items-center">
+                    <img src="/assets/images/cinema_icon.svg" alt="cinemaIcon">
+                    <strong>SerbiCinema</strong>
+                </a>
+                <ul class="list-unstyled d-flex mb-0">
+                    <li><a href="/filme.php" class="text-black underline-none ">Filme</a></li>
+                    <?php if (User::isAdmin()) { ?>
+                        <li><a href="/categorii.php" class="text-black underline-none">Categorii</a></li>
+                        <li><a href="/sali.php" class="text-black underline-none">Sali</a></li>
+                        <li><a href="/rezervari.php" class="text-black underline-none">Rezervari</a></li>
+                        <li><a href="/utilizatori.php" class="text-black underline-none">Clienti</a></li>
+                    <?php } ?>
             </div>
-        </div>
-    </div>
-    <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container">
-            <a href="#" class="navbar-brand d-flex align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-                <strong>Album</strong>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+
+            <?php if (!isset($_SESSION['user']['id'])) { ?>
+            <div>
+                <a class="btn btn-outline-light" href="/login.php">
+                    Login
+                </a>
+                <a class="btn btn-outline-light">
+                    Creeaza cont
+                </a>
+            </div>
+            <?php } else {?>
+                <a class="btn btn-outline-light" href="/database/logout.php">
+                    Logout
+                </a>
+            <?php } ?>
         </div>
     </div>
 </header>

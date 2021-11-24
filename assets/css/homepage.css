@@ -1,0 +1,24 @@
+.container-body {
+    min-height: calc(100vh - 244px - 62px);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.carousel {
+    max-height: 556px;
+}
+
+.carousel-inner {
+    max-height: 556px;
+}
+
+.welcome-text h2 {
+    font-family: 'Architects Daughter', cursive;
+    padding-bottom: 3rem;
+}
+
+.custom-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 1rem;
+}

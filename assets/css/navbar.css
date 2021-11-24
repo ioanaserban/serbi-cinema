@@ -1,0 +1,45 @@
+.h-62px {
+    height: 62px;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.9)!important;
+
+}
+
+.navbar-brand {
+    color: whitesmoke!important;
+    font-size: 20px;
+    border: 3px solid #358597;
+    background: #358597;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.navbar-brand img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.navbar-brand strong {
+    font-family: 'Architects Daughter', cursive;
+}
+
+.btn-outline-light:hover {
+    color: #358597!important;
+}
+
+.list-unstyled a {
+    margin-right: 1rem;
+    color: white!important;
+}
+
+.list-unstyled a:hover {
+    color: lightgray !important;
+}
+
+.underline-none {
+    text-decoration: none!important;
+}
+
