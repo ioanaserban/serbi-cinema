@@ -3,9 +3,14 @@
 @import "navbar.css";
 @import "login.css";
 @import "footer.css";
+@import "movies.css";
 
 
 
 * {
     font-family: 'Poppins', sans-serif;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
