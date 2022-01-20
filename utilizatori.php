@@ -29,7 +29,6 @@
             </tbody>
         </table>
 
-        <div class="btn btn-info my-3">Adauga un utilizator</div>
 
     </div>
 

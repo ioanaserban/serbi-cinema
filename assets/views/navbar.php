@@ -11,8 +11,9 @@
                 </a>
                 <ul class="list-unstyled d-flex mb-0">
                     <li><a href="/filme.php" class="text-black underline-none ">Filme</a></li>
-                    <li><a href="/rezervari.php" class="text-black underline-none">Rezervari</a></li>
-
+                    <?php if (User::isLoggedIn()) { ?>
+                        <li><a href="/rezervari.php" class="text-black underline-none">Rezervari</a></li>
+                    <?php } ?>
                     <?php if (User::isAdmin()) { ?>
                         <li><a href="/categorii.php" class="text-black underline-none">Categorii</a></li>
                         <li><a href="/sali.php" class="text-black underline-none">Sali</a></li>

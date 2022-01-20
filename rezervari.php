@@ -1,6 +1,8 @@
 <?php include 'assets/views/app.php'; ?>
-<?php $reservations = $dbManipulator->getRezervari(!User::isAdmin() ? $_SESSION['user']['id'] : null); ?>
 
+
+<?php if (User::isLoggedIn()) { ?>
+    <?php $reservations = $dbManipulator->getRezervari(!User::isAdmin() ? $_SESSION['user']['id'] : null); ?>
     <div class="container container-body">
         <table class="table">
             <thead>
@@ -34,8 +36,6 @@
             </tbody>
         </table>
 
-        <div class="btn btn-info my-3">Adauga o rezervare</div>
-
     </div>
-
+<?php } ?>
 <?php include 'assets/views/footer.php'; ?>
