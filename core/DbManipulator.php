@@ -87,6 +87,13 @@ class DbManipulator extends DbConnect
             ->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getCountRezervari($movieId)
+    {
+        return $this->_db->query('SELECT count(*) as countRezervi FROM aplicatie_cinema.rezervari r
+                INNER JOIN aplicatie_cinema.filme f on f.id_film = r.id_film where r.id_film = ' . $movieId)
+            ->fetchAll(PDO::FETCH_ASSOC)[0];
+    }
+
     public function getMoviesAndCategoriesFilterByCategoryName($categoryName)
     {
         return $this->_db->query('SELECT f.id_film, f.nume, f.regizor, f.casa_de_productie, c.nume AS categorie, c.id_categorie FROM aplicatie_cinema.filme f

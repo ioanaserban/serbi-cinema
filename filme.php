@@ -7,6 +7,14 @@ if (!empty($_GET['filterCategoryName'])) {
     $movies = $dbManipulator->getMoviesAndCategories();
 
 }
+
+$counter['countRezervi'] = 0;
+
+if (!empty($_GET['movieId'])) {
+    $counter = $dbManipulator->getCountRezervari($_GET['movieId']);
+}
+
+
 foreach ($movies as $key => $movie) {
     $movies[$key]['availableDateAndHours'] = $dbManipulator->getAvailableDateAndHoursByMovieId($movie['id_film']);
 }
@@ -104,6 +112,20 @@ foreach ($movies as $key => $movie) {
                     <div>
                         <button class="btn btn-secondary">Filtrare dupa categorie</button>
                     </div>
+                </form>
+            </div>
+        </div>
+        <div class="mb-4">
+            <div class="d-flex">
+                <form class="form-group d-flex">
+                    <div class="mr-3">
+                        <input name="movieId" class="form-control" placeholder="Ex. 1,2"
+                               value="<?= !empty($_GET['movieId']) ? $_GET['movieId'] : '' ?>">
+                    </div>
+                    <div>
+                        <button class="btn btn-secondary">Cate rezervari au filmele</button>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center ml-4"><?= $counter['countRezervi'] ?></div>
                 </form>
             </div>
         </div>
