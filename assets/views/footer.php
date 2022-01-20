@@ -34,5 +34,7 @@
         <a class="text-reset fw-bold" href="https://google.com/">cinemania-serbi.com</a>
     </div>
 </footer>
+
+<script src="/assets/javascript/app.js"></script>
 </body>
 </html>

@@ -9,6 +9,7 @@ if (!$sessionUser) {
     $message = 'Date incorecte';
 
     header('Location: /login.php?errorMsg='.$message);
+    die();
 }
 
 if ($sessionUser) {

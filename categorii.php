@@ -60,7 +60,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="/admin/filme-create.php" method="post">
+                <form action="/admin/categorii-create.php" method="post">
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="categName">Nume categorie</label>

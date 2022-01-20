@@ -11,10 +11,11 @@
                 </a>
                 <ul class="list-unstyled d-flex mb-0">
                     <li><a href="/filme.php" class="text-black underline-none ">Filme</a></li>
+                    <li><a href="/rezervari.php" class="text-black underline-none">Rezervari</a></li>
+
                     <?php if (User::isAdmin()) { ?>
                         <li><a href="/categorii.php" class="text-black underline-none">Categorii</a></li>
                         <li><a href="/sali.php" class="text-black underline-none">Sali</a></li>
-                        <li><a href="/rezervari.php" class="text-black underline-none">Rezervari</a></li>
                         <li><a href="/utilizatori.php" class="text-black underline-none">Clienti</a></li>
                     <?php } ?>
             </div>
@@ -24,7 +25,7 @@
                 <a class="btn btn-outline-light" href="/login.php">
                     Login
                 </a>
-                <a class="btn btn-outline-light">
+                <a class="btn btn-outline-light" href="/register.php">
                     Creeaza cont
                 </a>
             </div>

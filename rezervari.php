@@ -1,8 +1,7 @@
 <?php include 'assets/views/app.php'; ?>
-<?php $reservations = $dbManipulator->getRezervari(); ?>
+<?php $reservations = $dbManipulator->getRezervari(!User::isAdmin() ? $_SESSION['user']['id'] : null); ?>
 
     <div class="container container-body">
-
         <table class="table">
             <thead>
             <tr>

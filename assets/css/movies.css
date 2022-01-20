@@ -4,3 +4,9 @@
 .categories table tbody img {
     height: 25px;
 }
+
+.movies .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
